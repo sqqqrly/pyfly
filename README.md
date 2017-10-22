@@ -13,7 +13,7 @@ A simple flask app with unit tests.
   - When the repo changes:
     - Pipeline pulls it.
     - Pipeline runs unit tests.
-    - If Uts pass:
+    - If UTs pass:
       - Pipeline deploys to AWS.
       - Pipeline tests flask API.
     - If UTs fail:

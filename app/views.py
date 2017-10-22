@@ -1,29 +1,22 @@
 #!/usr/bin/env python3
 import os
+from random import choice
 
 from flask import render_template, redirect, url_for, request, Markup
 from flask_breadcrumbs import register_breadcrumb
 from flask_basicauth import BasicAuth
 from app import application, basic_auth
 
-def generate_a_name():
+def choose_a_name():
     """ A name generator. """
-    names = ['Bill', 'Nolan', 'Kudla', 'Mike', 'Chuck', 'David']
-    i = 0
-    while True:
-        yield names[i]
-        i += 1
-
-name = generate_a_name()
+    names = ['Bill', 'Nolan', 'Kudla', 'Jeff', 'Mike', 'Chuck', 'David']
+    name = choice(names)
+    return name
 
 def render_home_page():
     """ Utility function to render the home page.  """
-    global name
-    try:
-        contents = 'Hello {}'.format(next(name))
-    except IndexError:
-        name = generate_a_name()
-        contents = 'Hello {}'.format(next(name))
+    a_name = choose_a_name()
+    contents = f'<h3>Hello {a_name}</h3>'
     return render_template('home.html', contents=contents, auto_refresh=True)
 
 def render_fly_page():
