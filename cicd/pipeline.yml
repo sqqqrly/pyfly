@@ -16,9 +16,9 @@ jobs:
   serial: true
   plan:
   - get: pyfly-repo
-  - get: my-timer
+  #- get: my-timer
     trigger: true
   - task: hello
-    file: pyfly/cicdDDD/hello.yml
+    file: pyfly/cicd/hello.yml
 
 
