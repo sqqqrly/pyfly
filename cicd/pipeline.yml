@@ -19,6 +19,6 @@ jobs:
   - get: my-timer
     trigger: true
   - task: hello
-    file: pyfly/cicd/hello.yml
+    file: pyfly/cicdDDD/hello.yml
 
 
