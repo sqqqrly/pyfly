@@ -2,7 +2,7 @@
 A simple flask app with unit tests.
 
 ### Why?
-Learning Concourse CI/CD
+Learning Concourse CI/CD.
 
 ### Pipeline
 - Make a flask app with a very simple ui.
