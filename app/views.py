@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import os
-from random import choice
+from random import sample, randint
 
 from flask import render_template, redirect, url_for, request, Markup
 from flask_breadcrumbs import register_breadcrumb
@@ -8,10 +8,15 @@ from flask_basicauth import BasicAuth
 from app import application, basic_auth
 
 def choose_a_name():
-    """ A name generator. """
+    """ Returns a sampling of names of
+    random length and order as comma-sep string.
+    """
     names = ['Bill', 'Nolan', 'Kudla', 'Jeff', 'Mike', 'Chuck', 'David']
-    name = choice(names)
-    return name
+    count = randint(1, len(names))
+    name_list = sample(names, k=count)
+    #print(f'{count} --> {name_list}')
+    name_str = ', '.join(name_list)
+    return name_str
 
 def render_home_page():
     """ Utility function to render the home page.  """

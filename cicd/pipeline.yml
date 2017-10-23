@@ -1,0 +1,22 @@
+---
+jobs:
+- name: pyfly
+  public: true
+  serial: true
+  plan:
+  - get: pyfly-repo
+  - get: my-timer
+    trigger: true
+  - task: hello
+    file: cicd/hello.yml
+
+resources:
+- name: pyfly-repo
+  type: git
+  source:
+    uri: https://github.com/sqqqrly/pyfly.git
+
+- name: my-timer
+  type: time
+  source:
+    interval: 2m
