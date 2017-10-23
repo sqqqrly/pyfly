@@ -1,8 +1,8 @@
 # pyfly
 A simple flask app with unit tests.
 
-### Q. Why?
-### A. Learning Concourse CI/CD
+### Why?
+A. Learning Concourse CI/CD
 
 ### Pipeline
 - Make a flask app with a very simple ui.

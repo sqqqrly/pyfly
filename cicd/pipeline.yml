@@ -5,10 +5,10 @@ resources:
   source:
     uri: https://github.com/sqqqrly/pyfly.git
 
-#- name: my-timer
-#  type: time
-#  source:
-#    interval: 2m
+- name: my-timer
+  type: time
+  source:
+    interval: 2m
 
 jobs:
 - name: pyfly
@@ -16,9 +16,9 @@ jobs:
   serial: true
   plan:
   - get: pyfly-repo
-  #- get: my-timer
+  - get: my-timer
     trigger: true
   - task: hello
-    file: cicd/hello.yml
+    file: pyfly-repo/cicd/hello.yml
 
 
