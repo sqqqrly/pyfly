@@ -21,7 +21,7 @@ def choose_a_name():
 def render_home_page():
     """ Utility function to render the home page.  """
     a_name = choose_a_name()
-    contents = f'<h3>Hello {a_name}</h3>'
+    contents = '<h3>Hello {a_name}</h3>'.format(a_name=a_name)
     return render_template('home.html', contents=contents, auto_refresh=True)
 
 def render_fly_page():

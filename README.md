@@ -20,3 +20,8 @@ Learning Concourse CI/CD.
       - Do not deploy
       - Report failure with details
 
+### Pytest
+We are running this app in a python 3.6 virtual env.  Even so py.test does not want to run using python3.  This fixes it:
+```
+python3 $(which py.test)
+```

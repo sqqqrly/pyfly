@@ -11,7 +11,7 @@ resources:
 #    interval: 2m
 
 jobs:
-- name: hello1
+- name: unit_test_pyfly
   public: true
   serial: true
   plan:
@@ -19,7 +19,5 @@ jobs:
     trigger: true
   # - get: my-timer
   #   trigger: true
-  - task: hello
-    file: pyfly/cicd/hello.yml
-
-
+  - task: Configure 
+    file: pyfly/cicd/configure_container.yml

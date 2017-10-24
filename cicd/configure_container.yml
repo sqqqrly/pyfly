@@ -14,3 +14,7 @@ run:
   - -c
   - |
     ./pyfly/configure_container.sh
+    ./pyfly/unit_test.sh
+    
+
+
