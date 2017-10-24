@@ -8,4 +8,13 @@ image_resource:
 run:
   # path: echo
   # args: ["hello world from Littleton, NH"]
-  path: pyfly/hello.sh 
+  # path: pyfly/hello.sh 
+  path: sh
+  args:
+  - -exc
+  - |
+    whoami
+    env
+    go version
+    find .
+    touch some-output/my-built-artifact
