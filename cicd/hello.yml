@@ -5,6 +5,9 @@ image_resource:
   type: docker-image
   source: {repository: ubuntu, tag: "16.04"}
 
+inputs:
+- name: pyfly-repo
+
 run:
   # path: echo
   # args: ["hello world from Littleton, NH"]
