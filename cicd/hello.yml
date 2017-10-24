@@ -19,5 +19,6 @@ run:
     whoami
     env
     find .
+    mkdir -p some-output
     touch some-output/my-built-artifact
     find . -name my-build-artifact
