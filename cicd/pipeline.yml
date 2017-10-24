@@ -18,16 +18,9 @@ jobs:
   - get: pyfly-repo
   - get: my-timer
     trigger: true
-  - task: hello
+  - task: hello1
     file: pyfly-repo/cicd/hello.yml
-- name: hello2
-  public: true
-  serial: true
-  plan:
-  - get: pyfly-repo
-  - get: my-timer
-    trigger: true
-  - task: hello
+  - task: hello2
     file: pyfly-repo/cicd/hello.yml
 
 
