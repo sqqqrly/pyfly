@@ -10,6 +10,6 @@ DEBIAN_FRONTEND=noninteractive apt-get update -y &&\
 pip3 install -r requirements.txt &&
 pip3 install pytest-flask &&
 
-pushd pyfly || (2>&1 echo "Error: configure_container failed")
+pushd pyfly || (2>&1 echo "Error: configure_container failed"; exit 1)
 
 echo "== Configuring container (end)"
