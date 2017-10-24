@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-echo "Hello from bash"
+echo "Hello from bash on ubuntu"
