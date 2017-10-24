@@ -17,4 +17,4 @@ run:
     env
     find .
     touch some-output/my-built-artifact
-		find . -name my-build-artifact
+    find . -name my-build-artifact
