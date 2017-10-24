@@ -6,5 +6,6 @@ image_resource:
   source: {repository: ubuntu, tag: "16.04"}
 
 run:
-  path: echo
-  args: ["hello world from Littleton, NH"]
+  # path: echo
+  # args: ["hello world from Littleton, NH"]
+  path: pyfly/hello.sh 
