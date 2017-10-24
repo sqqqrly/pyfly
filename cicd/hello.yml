@@ -15,6 +15,6 @@ run:
   - |
     whoami
     env
-    go version
     find .
     touch some-output/my-built-artifact
+		find . -name my-build-artifact
