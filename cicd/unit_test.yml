@@ -11,10 +11,13 @@ inputs:
 run:
   path: bash
   args:
+  - -e
   - -c
   - |
-    ./pyfly/configure_container.sh
-    ./pyfly/unit_test.sh
+    pushd pyfly > /dev/null
+    ./configure_container.sh
+    ./unit_test.sh
+    popd > /dev/null
     
 
 

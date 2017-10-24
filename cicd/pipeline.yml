@@ -19,5 +19,5 @@ jobs:
     trigger: true
   # - get: my-timer
   #   trigger: true
-  - task: Configure 
-    file: pyfly/cicd/configure_container.yml
+  - task: Unittest
+    file: pyfly/cicd/unit_test.yml
