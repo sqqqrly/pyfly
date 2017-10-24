@@ -11,7 +11,16 @@ resources:
     interval: 2m
 
 jobs:
-- name: pyfly
+- name: hello1
+  public: true
+  serial: true
+  plan:
+  - get: pyfly-repo
+  - get: my-timer
+    trigger: true
+  - task: hello
+    file: pyfly-repo/cicd/hello.yml
+- name: hello2
   public: true
   serial: true
   plan:
