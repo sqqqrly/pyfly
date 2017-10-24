@@ -8,5 +8,4 @@ image_resource:
 run:
   # path: echo
   # args: ["hello world from Littleton, NH"]
-  # path: pyfly/hello.sh 
-  path: ls
+  path: pyfly/hello.sh 
