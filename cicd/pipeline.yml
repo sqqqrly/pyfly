@@ -1,6 +1,6 @@
 ---
 resources:
-- name: pyfly-repo
+- name: pyfly
   type: git
   source:
     uri: https://github.com/sqqqrly/pyfly.git
@@ -15,11 +15,11 @@ jobs:
   public: true
   serial: true
   plan:
-  - get: pyfly-repo
+  - get: pyfly
     trigger: true
   # - get: my-timer
   #   trigger: true
   - task: hello
-    file: pyfly-repo/cicd/hello.yml
+    file: pyfly/cicd/hello.yml
 
 

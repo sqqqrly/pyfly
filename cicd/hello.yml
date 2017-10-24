@@ -6,14 +6,11 @@ image_resource:
   source: {repository: ubuntu, tag: "16.04"}
 
 inputs:
-- name: pyfly-repo
+- name: pyfly
 
 run:
-  # path: echo
-  # args: ["hello world from Littleton, NH"]
-  # path: pyfly/hello.sh 
   path: bash
   args:
   - -c
   - |
-    ./pyfly-repo/configure_container.sh
+    ./pyfly/configure_container.sh
