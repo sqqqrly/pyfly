@@ -12,9 +12,9 @@ run:
   # path: echo
   # args: ["hello world from Littleton, NH"]
   # path: pyfly/hello.sh 
-  path: sh
+  path: bash
   args:
-  - -exc
+  - -c
   - |
     whoami
     env
