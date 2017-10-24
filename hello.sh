@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
-echo "Hello from bash on concourse container again!!"
+echo "Configuring container (begin)"
+apt install python3
+apt install python3-pip
+pushd pyfly-repo
+pip3 install -r requirements.txt
+echo "Configuring container (end)"
 echo "sleeping..."
 sleep 10
