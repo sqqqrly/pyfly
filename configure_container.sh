@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-echo "Configuring container (begin)"
+echo "== Configuring container (begin)"
 DEBIAN_FRONTEND=noninteractive apt-get update -y &&\
 	DEBIAN_FRONTEND=noninteractive apt-get install -y\
 	python3.4 \
@@ -8,4 +8,5 @@ DEBIAN_FRONTEND=noninteractive apt-get update -y &&\
 	DEBIAN_FRONTEND=noninteractive apt-get clean
 pushd pyfly-repo
 pip3 install -r requirements.txt
-echo "Configuring container (end)"
+pip3 install pytest-flask
+echo "== Configuring container (end)"
