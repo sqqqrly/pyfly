@@ -7,16 +7,10 @@ image_resource:
 
 inputs:
 - name: pyfly
-
-outputs:
 - name: marker
 
 run:
   path: bash
   args:
-  - -c
-  - |
-    ./pyfly/configure_container.sh &&
-    ./pyfly/unit_test.sh           &&
-    ./pyfly/make_markers.sh
+  - ./pyfly/show_markers.sh
 

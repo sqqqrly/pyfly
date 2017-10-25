@@ -20,4 +20,7 @@ jobs:
   # - get: my-timer
   #   trigger: true
   - task: Unittest
-    file: pyfly/cicd/unit_test.yml
+    file: pyfly/cicd/unit_test.yml  # Also, create marker dir
+  - task: ShowMarker
+    file: pyfly/cicd/show_marker.yml
+
